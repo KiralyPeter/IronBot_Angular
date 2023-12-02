@@ -1,0 +1,38 @@
+<ul>
+    <li *ngFor="let robot of robots">
+        <a routerLink="/robot/{{robot.id}}">
+            <img [src]="robot.imageUrl" [alt]="robot.name" />
+            <div class="content">
+                <div class="name">
+                    {{robot.name}}
+                </div>
+                <span class="favorite {{robot.favorite?'':'not'}}">
+                    🎔
+                </span>
+                <div class="stars">
+                    <ngb-rating                        
+                        [max]="5" 
+                        [(rate)]="robot.stars"
+                        style="
+                        color: red;
+                        size: 22;"                        
+                        uncheckedcolor = "black"                        
+                        [readonly]="true">
+                    </ngb-rating>                    
+                </div>
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of robot.origins">
+                            {{origin}}
+                        </span>
+                    </div>                    
+                </div>
+                <div class="price">
+                    <span>
+                        {{robot.price | currency}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
