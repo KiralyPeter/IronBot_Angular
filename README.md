@@ -40,9 +40,9 @@ GitHib-on megjelenik a "Compare & pull request"
 
 Visszacsekkolás a 'main'-ra:
 ```
-git checkout master
+git checkout main
 ```
 Utána ismét le kell frissíteniaz origin-en lévő master-t lokálba:
 ```
-git pull origin master
+git pull origin main
 ```
