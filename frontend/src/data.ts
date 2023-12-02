@@ -3,7 +3,7 @@ import { Robot } from "./app/shared/models/Robot";
 export const sample_robots: Robot[] = [
     {
         id:'1',
-        name:'Ironbot #1',
+        name:'Deflector',
         price: 15,
         tags:['Robot', 'Worker'],
         favorite:true,
@@ -13,7 +13,7 @@ export const sample_robots: Robot[] = [
     },
     {
         id:'2',
-        name:'Ironbot #2',
+        name:'Kitchen',
         price: 12,
         tags:['Robot', 'Worker'],
         favorite:false,
@@ -23,7 +23,7 @@ export const sample_robots: Robot[] = [
     },
     {
         id:'3',
-        name:'Ironbot #3',
+        name:'Kitchen',
         price: 20,
         tags:['Robot', 'Worker'],
         favorite:true,
@@ -33,7 +33,7 @@ export const sample_robots: Robot[] = [
     },
     {
         id:'4',
-        name:'Ironbot #4',
+        name:'Cleaner',
         price: 10,
         tags:['Robot', 'Worker'],
         favorite:false,
@@ -43,7 +43,7 @@ export const sample_robots: Robot[] = [
     },
     {
         id:'5',
-        name:'Ironbot #5',
+        name:'Nutcracer',
         price: 10,
         tags:['Robot', 'Worker'],
         favorite:false,
@@ -53,7 +53,7 @@ export const sample_robots: Robot[] = [
     },
     {
         id:'6',
-        name:'Ironbot #6',
+        name:'IronHead',
         price: 10,
         tags:['Robot', 'Worker'],
         favorite:false,
