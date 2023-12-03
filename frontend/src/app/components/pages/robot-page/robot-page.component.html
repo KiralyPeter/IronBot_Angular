@@ -1,1 +1,44 @@
-<p>robot-page works!</p>
+<div class="container">
+    <img [src]="robot.imageUrl" [alt]="robot.name" />
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{robot.name}}
+            </span>
+            <span class="favorite {{robot.favorite? '':'not'}}">🎔</span>
+        </div>
+        <div class="rating">
+            <ngb-rating                        
+                        [max]="5" 
+                        [(rate)]="robot.stars"
+                        style="
+                        color: red;
+                        size: 25;"                        
+                        uncheckedcolor = "black"                        
+                        [readonly]="true">
+            </ngb-rating> 
+        </div>
+        
+        <div class="origins">
+            <span *ngFor="let origin of robot.origins">
+                {{origin}}
+            </span>
+        </div>
+        
+        <div class="tags">
+            <a *ngFor="let tag of robot.tags" routerLink="/tag/{{tag}}">
+                {{tag}}
+            </a>
+        </div>
+
+        <div class="price">
+            <span>
+                {{robot.price | currency}}
+            </span>
+        </div>
+
+        <button>Add to Cart</button>
+
+    </div>
+</div>
