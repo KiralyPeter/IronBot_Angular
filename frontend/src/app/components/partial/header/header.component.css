@@ -64,3 +64,11 @@ a span{
     width: 100%;
     min-width: 8rem;
 }
+
+.IronBotLogo {
+    width: 100px;
+}
+
+.topmargin10 {
+    margin-top: 10px;
+}
