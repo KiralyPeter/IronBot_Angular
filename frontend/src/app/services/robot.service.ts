@@ -29,4 +29,8 @@ export class RobotService {
     // egyébként:
     this.getAll().filter(robot => robot.tags?.includes(tag));
   }
+
+  getRobotById(robotId:string):Robot{
+    return this.getAll().find(robot => robot.id == robotId) ?? new Robot();
+  }
 }

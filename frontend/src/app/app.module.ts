@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './components/partial/search/search.component';
 import { TagsComponent } from './components/partial/tags/tags.component';
+import { RobotPageComponent } from './components/pages/robot-page/robot-page.component';
 // import { RatingModule } from 'ng-starrating';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TagsComponent } from './components/partial/tags/tags.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    TagsComponent
+    TagsComponent,
+    RobotPageComponent
   ],
   imports: [
     BrowserModule,

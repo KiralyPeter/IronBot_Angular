@@ -13,6 +13,14 @@ src/app/components/partial - oldalakat részlegesen elfoglaló komponensek
 src/app/shared/models - egyes modellek helye
 src/data.ts - "dummy" adatbázis a frontend fejlesztéshez
 ```
+**A Git repo az IronBot_Angular könyvtárra van inicializálvba! Később a backend-nek külön könyvtára lesz.**
+
+**Az angular szioláltatást a fejlesztés jelen állapotában a frontend könyvtárból kell indítani. Pl.:**
+```
+peter@eagle-nest ~/Dev/IronBot_Angular/frontend [main] 
+: ng serve -o
+```
+
 Használt NodeJS és Angular verziók:
 ```
 npm version
