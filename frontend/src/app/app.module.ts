@@ -11,6 +11,7 @@ import { SearchComponent } from './components/partial/search/search.component';
 import { TagsComponent } from './components/partial/tags/tags.component';
 import { RobotPageComponent } from './components/pages/robot-page/robot-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { TitleComponent } from './components/partial/title/title.component';
 // import { RatingModule } from 'ng-starrating';
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
     SearchComponent,
     TagsComponent,
     RobotPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
