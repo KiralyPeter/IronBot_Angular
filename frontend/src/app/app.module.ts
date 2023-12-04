@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './components/partial/search/search.component';
 import { TagsComponent } from './components/partial/tags/tags.component';
 import { RobotPageComponent } from './components/pages/robot-page/robot-page.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 // import { RatingModule } from 'ng-starrating';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RobotPageComponent } from './components/pages/robot-page/robot-page.com
     HomeComponent,
     SearchComponent,
     TagsComponent,
-    RobotPageComponent
+    RobotPageComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
