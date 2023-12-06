@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+    [visible] = "!robot.id"
+    notFoundMessage="Robot Not Found"
+    resetLinkText = "Back To Homepage">
+</app-not-found>
+<div *ngIf="robot.id" class="container">
     <img [src]="robot.imageUrl" [alt]="robot.name" />
 
     <div class="details">
