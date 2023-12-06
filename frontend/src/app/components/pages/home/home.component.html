@@ -1,5 +1,9 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<app-not-found
+    [visible]="!robots || !robots.length"
+    resetLinkText = "Reset Search">    
+</app-not-found>
 <ul>
     <li *ngFor="let robot of robots">
         <a routerLink="/robot/{{robot.id}}">
