@@ -1,36 +1,38 @@
 import { Injectable } from '@angular/core';
 import { Robot } from '../shared/models/Robot';
-import { sample } from 'rxjs';
+import { Observable, sample } from 'rxjs';
 import { sample_robots, sample_tags } from 'src/data';
 import { Tag } from '../shared/models/Tag';
+import { HttpClient } from '@angular/common/http';
+import { ROBOTS_BY_ID_URL, ROBOTS_BY_SEARCH_URL, ROBOTS_BY_TAG_URL, ROBOTS_URL } from '../shared/constants/urls';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RobotService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getAll():Robot[]{
-    return sample_robots;
+  getAll(): Observable<Robot[]>{
+    return this.http.get<Robot[]>(ROBOTS_URL);
   }
 
   getAllRobotsBySearchTerm(searchTerm:string){
-    return this.getAll().filter(robot => robot.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    return this.http.get<Robot[]>(ROBOTS_BY_SEARCH_URL + searchTerm);
   }
 
-  getAllTags():Tag[]{
-    return sample_tags
+  getAllTags():Observable<Tag[]>{
+    return this.http.get<Tag[]>(ROBOTS_BY_TAG_URL);
   }
 
-  getAllRobotsByTag(tag:string):Robot[]{
+  getAllRobotsByTag(tag:string):Observable<Robot[]>{
     return tag == "All"?
     this.getAll(): 
     // egyébként:
-    this.getAll().filter(robot => robot.tags?.includes(tag));
+    this.http.get<Robot[]>(ROBOTS_BY_TAG_URL + tag);
   }
 
-  getRobotById(robotId:string):Robot{
-    return this.getAll().find(robot => robot.id == robotId) ?? new Robot();
+  getRobotById(robotId:string):Observable<Robot>{
+    return this.http.get<Robot>(ROBOTS_BY_ID_URL + robotId);
   }
 }

@@ -12,7 +12,9 @@ export class TagsComponent implements OnInit{
   
   tags?:Tag[]
   constructor(robotService:RobotService){
-    this.tags = robotService.getAllTags();
+    robotService.getAllTags().subscribe(serverTags => {
+      this.tags = serverTags;
+    });
   }
 
 
