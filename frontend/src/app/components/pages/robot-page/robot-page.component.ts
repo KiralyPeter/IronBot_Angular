@@ -16,7 +16,9 @@ export class RobotPageComponent implements OnInit{
     private cartService:CartService, private router: Router){
     activatedRoute.params.subscribe((params) => {
       if(params.id)
-      this.robot = robotService.getRobotById(params.id);
+      robotService.getRobotById(params.id).subscribe(serverRobot => {
+        this.robot = serverRobot;
+      });
     })
   }
   
