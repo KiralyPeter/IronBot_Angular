@@ -13,6 +13,8 @@ import { RobotPageComponent } from './components/pages/robot-page/robot-page.com
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partial/title/title.component';
 import { NotFoundComponent } from './components/partial/not-found/not-found.component';
+import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 // import { RatingModule } from 'ng-starrating';
 
 @NgModule({
@@ -25,14 +27,16 @@ import { NotFoundComponent } from './components/partial/not-found/not-found.comp
     RobotPageComponent,
     CartPageComponent,
     TitleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     // RatingModule - using Bootsrap instead..
   ],
   providers: [],
