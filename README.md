@@ -15,8 +15,12 @@ src/data.ts - "dummy" adatbázis a frontend fejlesztéshez
 ```
 **A Git repo az IronBot_Angular könyvtárra van inicializálvba! Később a backend-nek külön könyvtára lesz.**
 
-A projekt inicializálása letöltés után:
+A projekt inicializálása letöltés után, külön bacekn és frontend könytárakban!:
 ```
+cd frontend
+npm i
+
+cd backend
 npm i
 ```
 
